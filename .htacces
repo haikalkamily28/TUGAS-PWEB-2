@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /PWEB-TUGAS-2
+RewriteRule ^index\\.php$ - [L]
+RewrteCond %{REQUEST_FILENAME} !-f
+RewrteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /PWEB-TUGAS-2/index.php [L]
