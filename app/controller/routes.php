@@ -1,18 +1,14 @@
 <?php
 
-// Auth
-Router::url('login', 'get', 'c_auth::login');
-// Router::url('login', 'post', 'c_auth::sessionLogin');
-Router::url('register', 'get', 'c_auth::register');
-// Router::url('register', 'post', 'c_auth::newRegister');
-Router::url('logout', 'get', 'c_auth::logout');
+if ($_SERVER['REQUEST_URI'] === '/login') {
+    AuthController::login();
+}
 
+if ($_SERVER['REQUEST_URI'] === '/session-login' && $_SERVER['REQUEST_METHOD'] === 'POST') {
+    AuthController::sessionLogin();
+}
 
-// Dashboard
-Router::url('dashboard', 'get', 'c_dashboard::dashboard');
+if ($_SERVER['REQUEST_URI'] === '/logout') {
+    AuthController::logout();
+}
 
-
-
-Router::url('/', 'get', function () {
-    header('Location: login');
-});

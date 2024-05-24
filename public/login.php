@@ -13,7 +13,7 @@
     
     <div class="bg-white p-8 rounded-lg shadow-md w-full sm:w-96">
         <h1 class="text-3xl font-bold mb-6 text-center text-gray-800">Login</h1>
-        <form >
+        <form action="/session-login" method="POST" >
             <div class="mb-4">
                 <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
                 <input type="text" id="username" name="username" autocomplete="username" class="ps-2 mt-1 py-1 hover:border-blue-600 focus:ring-purple-500 focus:border-purple-500 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
